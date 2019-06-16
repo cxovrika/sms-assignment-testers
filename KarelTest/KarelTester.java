@@ -27,8 +27,7 @@ public class KarelTester {
 	public static void printResult(String testName, Result result) {
 		System.out.println("********************");
 		System.out.print(testName + " result: ");
-		System.out.println("passed " + result.getRunCount() + "/"
-				+ (result.getRunCount() - result.getFailureCount() - result.getIgnoreCount()) + ".");
+		System.out.println("passed " + (result.getRunCount() - result.getFailureCount() - result.getIgnoreCount()) + "/" + result.getRunCount() + ".");
 
 		int testNum = 1;
 		for (Failure failure : result.getFailures()) {
