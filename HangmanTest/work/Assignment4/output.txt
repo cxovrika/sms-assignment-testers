@@ -1,0 +1,20 @@
+=== LEXICON TESTS === 
+=== PASSED === Lexicon size is correct
+=== PASSED === All words are present in the lexicon
+
+
+=== CONSOLE TESTS === 
+=== PASSED === Hangman correctly won the game
+=== PASSED === Hangman correctly lost the game
+=== PASSED === Hangman correctly lost the game after some guesses
+
+
+=== CANVAS TESTS === 
+=== PASSED === Head was added correctly
+=== PASSED === Body was added correctly
+=== PASSED === Left hand was added correctly
+=== PASSED === Right hand was added correctly
+=== PASSED === Left leg was added correctly
+=== PASSED === Right leg was added correctly
+=== PASSED === Left foot was added correctly
+=== PASSED === Right foot was added correctly
