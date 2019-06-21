@@ -1,14 +1,14 @@
-del work\Assignment1\karel.jar
-copy KarelTester.java .\work\Assignment1\
-copy CollectNewspaperKarelTest.java .\work\Assignment1\
-copy StoneMasonKarelTest.java .\work\Assignment1\
-copy CheckerBoardKarelTest.java .\work\Assignment1\
-copy MidpointFindingKarelTest.java .\work\Assignment1\
-copy karel.jar .\work\Assignment1\
-copy junit-4.12.jar .\work\Assignment1\
-copy hamcrest-core-1.3.jar .\work\Assignment1\
-copy acm.jar .\work\Assignment1\
+del %1\work\Assignment1\karel.jar
+copy %1\KarelTester.java %1\work\Assignment1\
+copy %1\CollectNewspaperKarelTest.java %1\work\Assignment1\
+copy %1\StoneMasonKarelTest.java %1\work\Assignment1\
+copy %1\CheckerBoardKarelTest.java %1\work\Assignment1\
+copy %1\MidpointFindingKarelTest.java %1\work\Assignment1\
+copy %1\karel.jar %1\work\Assignment1\
+copy %1\junit-4.12.jar %1\work\Assignment1\
+copy %1\hamcrest-core-1.3.jar %1\work\Assignment1\
+copy %1\acm.jar %1\work\Assignment1\
 cd work
 cd Assignment1
-javac -cp karel.jar;junit-4.12.jar;hamcrest-core-1.3.jar;acm.jar CollectNewspaperKarel.java StoneMasonKarel.java CheckerBoardKarel.java MidpointFindingKarel.java KarelTester.java CollectNewspaperKarelTest.java StoneMasonKarelTest.java CheckerBoardKarelTest.java MidpointFindingKarelTest.java
+javac -cp %1\work\Assignment1\karel.jar;%1\work\Assignment1\junit-4.12.jar;%1\work\Assignment1\hamcrest-core-1.3.jar;%1\work\Assignment1\acm.jar %1\work\Assignment1\CollectNewspaperKarel.java %1\work\Assignment1\StoneMasonKarel.java %1\work\Assignment1\CheckerBoardKarel.java %1\work\Assignment1\MidpointFindingKarel.java %1\work\Assignment1\KarelTester.java %1\work\Assignment1\CollectNewspaperKarelTest.java %1\work\Assignment1\StoneMasonKarelTest.java %1\work\Assignment1\CheckerBoardKarelTest.java %1\work\Assignment1\MidpointFindingKarelTest.java
 java -cp .;karel.jar;junit-4.12.jar;hamcrest-core-1.3.jar;acm.jar KarelTester
