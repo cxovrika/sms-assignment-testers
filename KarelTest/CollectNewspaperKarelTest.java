@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -37,12 +38,12 @@ public class CollectNewspaperKarelTest {
 		int numCols = newWorld.getColumns();
 		for (int x = 1; x < numCols; x++) {
 			for (int y = 1; y < numRows; y++) {
-				assertEquals("(" + x + ", " + y + ")" + " should not contain beeper -", 0, newWorld.getBeepersOnCorner(x, y));
+				assertTrue("(" + x + ", " + y + ")" + " should not contain beeper", 0 == newWorld.getBeepersOnCorner(x, y));
 			}
 		}
-		assertEquals("Karel's final destination should be (3,4), facing East -", 3, collectNewspaperKarel.getLocation().x);
-		assertEquals("Karel's final destination should be (3,4), facing East -", 4, collectNewspaperKarel.getLocation().y);
-		assertEquals("Karel's final destination should be (3,4), facing East -", KarelWorld.EAST, collectNewspaperKarel.getDirection());
+		assertTrue("Karel's final destination should be (3,4), facing East", 3 == collectNewspaperKarel.getLocation().x);
+		assertTrue("Karel's final destination should be (3,4), facing East", 4 == collectNewspaperKarel.getLocation().y);
+		assertTrue("Karel's final destination should be (3,4), facing East", KarelWorld.EAST == collectNewspaperKarel.getDirection());
 	}
 
 }

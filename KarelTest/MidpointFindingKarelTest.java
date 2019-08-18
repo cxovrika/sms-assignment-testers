@@ -16,8 +16,8 @@ public class MidpointFindingKarelTest {
 		newWorld.init(1, 1);
 		midpointFindingKarel.setWorld(newWorld);
 		midpointFindingKarel.run();
-		assertTrue("Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
-		assertTrue("", isKarelCorrectlyPositioned(midpointFindingKarel));
+		assertTrue("Board 1x1 - Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
+		assertTrue("Board 1x1 - Karel finally should be positioned on midpoint", isKarelCorrectlyPositioned(midpointFindingKarel));
 	}
 	
 	@Test
@@ -28,8 +28,8 @@ public class MidpointFindingKarelTest {
 		newWorld.init(2, 2);
 		midpointFindingKarel.setWorld(newWorld);
 		midpointFindingKarel.run();
-		assertTrue("Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
-		assertTrue(isKarelCorrectlyPositioned(midpointFindingKarel));
+		assertTrue("Board 2x2 - Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
+		assertTrue("Board 2x2 - Karel finally should be positioned on midpoint", isKarelCorrectlyPositioned(midpointFindingKarel));
 	}
 	
 	@Test
@@ -40,8 +40,8 @@ public class MidpointFindingKarelTest {
 		newWorld.init(5, 5);
 		midpointFindingKarel.setWorld(newWorld);
 		midpointFindingKarel.run();
-		assertTrue("Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
-		assertTrue(isKarelCorrectlyPositioned(midpointFindingKarel));
+		assertTrue("Board 5x5 - Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
+		assertTrue("Board 5x5 - Karel finally should be positioned on midpoint", isKarelCorrectlyPositioned(midpointFindingKarel));
 	}
 	
 	@Test
@@ -52,8 +52,8 @@ public class MidpointFindingKarelTest {
 		newWorld.init(20, 20);
 		midpointFindingKarel.setWorld(newWorld);
 		midpointFindingKarel.run();
-		assertTrue("Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
-		assertTrue(isKarelCorrectlyPositioned(midpointFindingKarel));
+		assertTrue("Board 20x20 - Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
+		assertTrue("Board 20x20 - Karel finally should be positioned on midpoint", isKarelCorrectlyPositioned(midpointFindingKarel));
 	}
 	
 	@Test
@@ -64,8 +64,8 @@ public class MidpointFindingKarelTest {
 		newWorld.init(7, 9);
 		midpointFindingKarel.setWorld(newWorld);
 		midpointFindingKarel.run();
-		assertTrue("Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
-		assertTrue(isKarelCorrectlyPositioned(midpointFindingKarel));
+		assertTrue("Board 7x9 - Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
+		assertTrue("Board 7x9 - Karel finally should be positioned on midpoint", isKarelCorrectlyPositioned(midpointFindingKarel));
 	}
 	
 	@Test
@@ -76,8 +76,8 @@ public class MidpointFindingKarelTest {
 		newWorld.init(8, 12);
 		midpointFindingKarel.setWorld(newWorld);
 		midpointFindingKarel.run();
-		assertTrue("Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
-		assertTrue(isKarelCorrectlyPositioned(midpointFindingKarel));
+		assertTrue("Board 8x12 - Only midpoint should be filled", isOnlyMidpointFilled(newWorld));
+		assertTrue("Board 8x12 - Karel finally should be positioned on midpoint", isKarelCorrectlyPositioned(midpointFindingKarel));
 	}
 	
 	boolean isOnlyMidpointFilled(KarelWorld world) {
