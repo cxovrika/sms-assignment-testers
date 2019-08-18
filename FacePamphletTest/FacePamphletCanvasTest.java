@@ -38,8 +38,8 @@ public class FacePamphletCanvasTest {
 		Object element = it.next();
 		if (element instanceof GLabel) {
 			assertEquals(
-					"After calling showMessage(\"Testing\"), label with the text \"Testing\" should be added on canvas -",
-					"Testing", ((GLabel) element).getLabel());
+					"After calling showMessage(\"Testing\"), label was not added on canvas -",
+					"Testing",((GLabel) element).getLabel());
 		}
 
 		assertEquals("Font for the message should be the same as MESSAGE_FONT in constants file -",
@@ -59,10 +59,10 @@ public class FacePamphletCanvasTest {
 		Object nameLabel = canvas.getElementAt(FacePamphletConstants.LEFT_MARGIN, FacePamphletConstants.TOP_MARGIN);
 
 		if (nameLabel != null && nameLabel instanceof GLabel) {
-			assertEquals("Name label text is not correct", "John", ((GLabel) nameLabel).getLabel());
-			assertEquals("Font for name label should be PROFILE_NAME_FONT", FacePamphletConstants.PROFILE_NAME_FONT,
+			assertEquals("Name label text was not correct -", "John", ((GLabel) nameLabel).getLabel());
+			assertEquals("Font for name label was not correct -", FacePamphletConstants.PROFILE_NAME_FONT,
 					((GLabel) nameLabel).getFont().getName() + "-" + ((GLabel) nameLabel).getFont().getSize());
-			assertEquals("Color for name label should be BLUE", Color.BLUE, ((GLabel) nameLabel).getColor());
+			assertEquals("Color for name label was not correct", Color.BLUE, ((GLabel) nameLabel).getColor());
 		} else {
 			fail("Name label was not found on correct coordinates");
 		}
@@ -82,9 +82,9 @@ public class FacePamphletCanvasTest {
 				FacePamphletConstants.TOP_MARGIN + nameLabel.getAscent() + FacePamphletConstants.IMAGE_MARGIN);
 
 		if (rectangle != null && rectangle instanceof GRect) {
-			assertEquals("Height for \"No Image\" picture should be the same as IMAGE_WIDTH ",
+			assertEquals("Height for \"No Image\" picture was not correct -",
 					FacePamphletConstants.IMAGE_WIDTH, ((GRect) rectangle).getWidth(), 0.1);
-			assertEquals("Width for \"No Image\" picture should be the same as IMAGE_HEIGHT ",
+			assertEquals("Width for \"No Image\" picture was not correct -",
 					FacePamphletConstants.IMAGE_HEIGHT, ((GRect) rectangle).getHeight(), 0.1);
 		} else {
 			fail("\"No Image\" picture was not found on correct coordinates");
@@ -99,8 +99,8 @@ public class FacePamphletCanvasTest {
 				rectangleY + FacePamphletConstants.IMAGE_HEIGHT / 2);
 
 		if (noImageLabel != null && noImageLabel instanceof GLabel) {
-			assertEquals("\"No Image\" label text is not correct", "No Image", ((GLabel) noImageLabel).getLabel());
-			assertEquals("Font for \"No Image\" label should be PROFILE_IMAGE_FONT",
+			assertEquals("\"No Image\" label text was not correct -", "No Image", ((GLabel) noImageLabel).getLabel());
+			assertEquals("Font for \"No Image\" label was not correct -",
 					FacePamphletConstants.PROFILE_IMAGE_FONT,
 					((GLabel) noImageLabel).getFont().getName() + "-" + ((GLabel) noImageLabel).getFont().getSize());
 		} else {
@@ -133,9 +133,9 @@ public class FacePamphletCanvasTest {
 					FacePamphletConstants.TOP_MARGIN + nameLabel.getAscent() + FacePamphletConstants.IMAGE_MARGIN);
 
 			if (image != null && image instanceof GImage) {
-				assertEquals("Height for profile picture should be the same as IMAGE_WIDTH ",
+				assertEquals("Height for profile picture was not correct -",
 						FacePamphletConstants.IMAGE_WIDTH, ((GImage) image).getWidth(), 0.1);
-				assertEquals("Width for profile picture should be the same as IMAGE_HEIGHT ",
+				assertEquals("Width for profile picture was not correct -",
 						FacePamphletConstants.IMAGE_HEIGHT, ((GImage) image).getHeight(), 0.1);
 				assertEquals("Image source mismatched", newImage.getImage().getSource(),
 						((GImage) image).getImage().getSource());
@@ -163,8 +163,8 @@ public class FacePamphletCanvasTest {
 						+ FacePamphletConstants.IMAGE_HEIGHT + FacePamphletConstants.STATUS_MARGIN);
 
 		if (statusLabel != null && statusLabel instanceof GLabel) {
-			assertEquals("Status label text is not correct", "John is running", ((GLabel) statusLabel).getLabel());
-			assertEquals("Font for status label should be the same as PROFILE_STATUS_FONT",
+			assertEquals("Status label text was not correct -", "John is running", ((GLabel) statusLabel).getLabel());
+			assertEquals("Font for status label was not correct -",
 					FacePamphletConstants.PROFILE_STATUS_FONT,
 					((GLabel) nameLabel).getFont().getName() + "-" + ((GLabel) statusLabel).getFont().getSize() + "-"
 							+ (((GLabel) statusLabel).getFont().isBold() ? "bold" : ""));
@@ -208,8 +208,8 @@ public class FacePamphletCanvasTest {
 				FacePamphletConstants.TOP_MARGIN + nameLabel.getAscent() + FacePamphletConstants.IMAGE_MARGIN);
 
 		if (friendsLabel != null && friendsLabel instanceof GLabel) {
-			assertEquals("Name for friends label was not correct", "Friends:", ((GLabel) friendsLabel).getLabel());
-			assertEquals("Font for the friends label should be PROFILE_FRIEND_LABEL_FONT",
+			assertEquals("Name for friends label was not correct -", "Friends:", ((GLabel) friendsLabel).getLabel());
+			assertEquals("Font for the friends label was not correct -",
 					FacePamphletConstants.PROFILE_FRIEND_LABEL_FONT,
 					((GLabel) nameLabel).getFont().getName() + "-" + ((GLabel) friendsLabel).getFont().getSize() + "-"
 							+ (((GLabel) friendsLabel).getFont().isBold() ? "bold" : ""));
@@ -238,7 +238,7 @@ public class FacePamphletCanvasTest {
 
 		if (bobLabel != null && bobLabel instanceof GLabel) {
 			assertEquals("Name for friend's label was not correct -", "Bob", ((GLabel) bobLabel).getLabel());
-			assertEquals("Font for the name for friend's label should be PROFILE_FRIEND_FONT -",
+			assertEquals("Font for the name for friend's label was not correct -",
 					FacePamphletConstants.PROFILE_FRIEND_FONT,
 					((GLabel) bobLabel).getFont().getName() + "-" + ((GLabel) bobLabel).getFont().getSize());
 		} else {
