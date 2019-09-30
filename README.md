@@ -43,11 +43,15 @@ CMD ["src/commands.sh", "/src"]
 აზრი არ უნდა ქონდეს ვინდოუსის იქნება თუ ლინუქსის,
   მაგრამ ვინდოუსის სერვერზე არ შემიმოწმებია
 output fedora სერვერზე:
-[server-output](./server-output.png)
+
+
+![server-output](./server-output.png)
 ## ტესტერი გაეშვება დოკერის კონტეინერში
 (მარტო sms-back თუ იყო კონტეინერში, მაინც). იმ შემთხვევაშიც, თუ ეკრანთან კავშირის მქონდე კომპიუტერ
 - output დოკერზე (ჩემს ლეპტოპზე)
-[docker-output](./docker-output.png)
+
+
+![docker-output](./docker-output.png)
 ## TODO რომელ ტესტერებს აქვთ ეს პრობლემა
 ყველა, რომელიც კარელს იყენებს, დანარჩენი ბიბლიოთეკები ჯერ არ დამიტესტავს
 დავამატებ სტატუსს
@@ -58,4 +62,6 @@ output fedora სერვერზე:
 ახლა მარტო ეს ვცადე
 https://stackoverflow.com/questions/662421/no-x11-display-variable-what-does-it-mean
 export DISPLAY=:0.0 -ს მერე პროგრამა გაეშვა, მაგრამ
-[server-output-display](./server-output-display.png)
+
+
+![server-output-display](./server-output-display.png)
