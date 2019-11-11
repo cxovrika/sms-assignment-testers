@@ -1,0 +1,4 @@
+FROM jboss/wildfly
+COPY . src/
+RUN javac -cp src/junit-4.12.jar:src/hamcrest-core-1.3.jar:src/acm.jar src/NameSurfer.java src/NameSurferGraph.java src/NameSurferEntry.java src/NameSurferDataBase.java src/NameSurferConstants.java src/NameSurferTester.java src/NameSurferTest.java src/NameSurferGraphTest.java src/NameSurferGraphTester.java src/NameSurferEntryTest.java src/NameSurferDataBaseTest.java 
+RUN java -cp src/:src/junit-4.12.jar:src/hamcrest-core-1.3.jar:src/acm.jar NameSurferTester > $1/output.txt
