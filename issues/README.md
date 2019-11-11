@@ -59,9 +59,20 @@ output fedora სერვერზე:
 შეიძლება არსებობს ეკრანის და მასთან კავშირის სიმულაციის ბიბლიოთეკები ან ლინუქსის
 კონტეინერი, არც ისე კარგად დოკუმენტირებული საკითხია მაგრამ შესაძლებელიუნდა იყოს.
   
-ახლა მარტო ეს ვცადე
+### attempts
+1. on server
 https://stackoverflow.com/questions/662421/no-x11-display-variable-what-does-it-mean
 export DISPLAY=:0.0 -ს მერე პროგრამა გაეშვა, მაგრამ
 
-
 ![server-output-display](./server-output-display.png)
+
+2. with docker
+``` sh
+docker run -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix iarigby/sms-test
+docker run -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix iarigby/sms-test
+```
+ორივე იგივე შედეგით სრულდება, როგორც სერვერზე. 
+
+აქედან ვცადე, და ვინოდუსზე დაყენებული დოკერისთვისაც არის მსგავსი ინსტრუქცია 
+http://somatorio.org/en/post/running-gui-apps-with-docker/
+
