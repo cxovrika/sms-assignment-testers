@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import com.sun.prism.Graphics;
-import com.sun.prism.paint.Color;
 
 import acm.graphics.GObject;
 import acm.graphics.GPoint;
