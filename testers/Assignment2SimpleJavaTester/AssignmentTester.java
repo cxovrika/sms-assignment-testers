@@ -133,12 +133,37 @@ public class AssignmentTester {
 		
 		System.out.println(failed ? "FAILED" : "PASSED");
 	}
-
 	
+	private static void findRangeTest3() {
+		FindRange testProgram = new FindRange();
+		Program.printedStrings.clear();
+		ArrayList<Integer> testInts = new ArrayList<Integer>();
+		testInts.add(10);
+		testInts.add(0);
+		
+		Program.intList = testInts;
+		
+		ArrayList<String> expectedPrefixes = new ArrayList<String>();
+		expectedPrefixes.add("This program finds the largest and smallest numbers");
+		for (int i = 0; i < testInts.size(); i++) {
+			expectedPrefixes.add("? ");
+		}
+		expectedPrefixes.add("smallest: 0");
+		expectedPrefixes.add("largest: 10");
+
+		testProgram.run();
+		
+		System.out.println("Test3:");
+		boolean failed = checkProgramOutputForExpectedPrefixes(expectedPrefixes);
+		
+		System.out.println(failed ? "FAILED" : "PASSED");
+	}
+
 	private static void testFindRange() {
 		System.out.println("Find Range test results:");
 		findRangeTest1();
 		findRangeTest2();
+		findRangeTest3();
 		System.out.println();
 	}
 	
