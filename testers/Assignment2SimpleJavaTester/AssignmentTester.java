@@ -148,7 +148,7 @@ public class AssignmentTester {
 		for (int i = 0; i < testInts.size(); i++) {
 			expectedPrefixes.add("? ");
 		}
-		expectedPrefixes.add("smallest: 0");
+		expectedPrefixes.add("smallest: 10");
 		expectedPrefixes.add("largest: 10");
 
 		testProgram.run();
