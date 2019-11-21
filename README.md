@@ -2,7 +2,7 @@
 
 ```sh
 # გადმოწერა / კლონირება
-git clone git@github.com:cxovrika/sms-assignment-testers.git
+git clone https://github.com/cxovrika/sms-assignment-testers
 # ცვლილებების განახლება
 git pull --rebase # გაუშვით კლონირებულ დირექტორიაში
 ```
