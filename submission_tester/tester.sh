@@ -1,5 +1,5 @@
-tester=Assignment2SimpleJavaTester # change this
-
+tester=BreakoutTester # change this
+source ./java.sh
 resultsdir=results
 if [ -d $resultsdir ]
 then
