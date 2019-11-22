@@ -1,26 +1,21 @@
 tester=BreakoutTester # change this
-source ./java.sh
+
 resultsdir=results
-if [ -d $resultsdir ]
+
+script_location=$(dirname $BASH_SOURCE)
+source $script_location/java.sh
+source $script_location/unall.sh
+
+
+unarchive zip
+unarchive rar
+
+if [ "$1" == "unzip" ]
 then
-	echo "skipping unrar, delete $resultsdir directory to change this"
-else
-	mkdir -p $resultsdir
-	for file in $(/bin/ls *.rar)
-	do
-		id=$(basename $file .rar)
-		mkdir $resultsdir/$id
-		unrar x $file $resultsdir/$id/
-	done
-	for file in $(/bin/ls *.zip)
-	do
-		id=$(basename $file .zip)
-		mkdir $resultsdir/$id
-		unzip $file -d $resultsdir/$id/
-	done
+	exit
 fi
 
-format="\e[7m" # invert output
+text_format="\e[7m" # invert output
 tester_location=$(pwd)/$tester
 for submission in $(/bin/ls $resultsdir)
 do
@@ -33,11 +28,7 @@ do
 		echo "$submission: started testing"
 		sh $tester/commands-modified.sh $submission_location $tester_location \
 			&& echo "$submission: finished testing"  \
-		|| echo -e "$format$submission\e[0m: compile error. see errors.txt and rerun this script after fixing it" \
-		 
+			|| echo -e "$text_format$submission\e[0m: compile error. see errors.txt and rerun this script after fixing it" \
+
 	fi
 done
-
-
-
-	
