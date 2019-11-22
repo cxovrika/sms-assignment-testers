@@ -1,4 +1,5 @@
-rm work/Assignment3/acm.jar
+source ./java.sh
+rm -f work/Assignment3/acm.jar
 cp acm.jar work/Assignment3
 cp BreakoutTester.java work/Assignment3
 
