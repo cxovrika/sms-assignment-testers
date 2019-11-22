@@ -10,11 +10,11 @@ import acm.program.GraphicsProgram;
 import acm.program.Program;
 import acm.util.JTFTools;
 
+@SuppressWarnings("deprecation")
 public class BreakoutTester {
 
 	public static Breakout game;
 	
-	@SuppressWarnings("deprecation")
 	public static void testWallReflection() throws InterruptedException {
 		GraphicsProgram.canvasObjects = new ArrayList<>();
 		Program.bricks.clear();
