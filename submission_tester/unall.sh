@@ -13,7 +13,7 @@ then
     fi
 fi
 
-echo $resultsdir
+# echo $resultsdir
 function unrar_command() {
 	unrar x $1 $2
 }
@@ -24,7 +24,7 @@ function unzip_command() {
 
 function unarchive() {
 	format=$1
-	for file in $(/bin/ls *.$format)
+	for file in $(/bin/ls *.$format 2> /dev/null)
 	do
 		id=$(basename $file .$format)
 		destination=$resultsdir/$id
@@ -33,9 +33,9 @@ function unarchive() {
 			echo "skipping un$format for $id, remove destionation dir to change this"
 		else
 			mkdir $destination
-			echo "un$format $file $destination"
+#			echo "un$format $file $destination"
 			command=un"$format"_command
-		    $command $file $destination
+		    $command $file $destination > /dev/null 2>&1
 		fi
 	done
 }

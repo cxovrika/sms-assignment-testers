@@ -25,7 +25,7 @@ then
 		destination="$resultsdir/$submission/$run_dir"
 		if [ ! -d $destination ]
 		then
-			echo "$submission"
+			echo "setting up $submission..."
 			mkdir -p $destination
 			sh $script_location/cleanup.sh $resultsdir/$submission
 			cp $script_location/run.sh $destination

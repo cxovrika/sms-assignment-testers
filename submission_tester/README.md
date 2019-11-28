@@ -22,3 +22,13 @@ results დირექტორიაში იქნება ყველა 
 გაუშვით ბრძანება
 
 `sh submission_tester/tester.sh run_setup`
+
+ამის შემდეგ, კონკრეტული სტუდენტის თამაშის ჩასართავად
+
+``` sh
+cd results/$student/run
+sh run.sh
+<your_favorite_text_editor_here> Breakout.java
+```
+
+

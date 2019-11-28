@@ -8,7 +8,7 @@ if [ -z "$1" ]; then
 fi
 cd $assignment_dir
 mkdir -p submission
-mv * submission
+mv * submission 2> /dev/null
 assignment_file=Breakout.java
 found_file=$(find -name $assignment_file | grep -v .git | grep -v .class | head -1)
 
@@ -16,10 +16,10 @@ found_file=$(find -name $assignment_file | grep -v .git | grep -v .class | head 
 
 if [ -z "$found_file" ]
 then
-    echo "couldn't find file"
+    echo "couldn't find $assignment_file in $assignment_dir"
 else
     found_dir=$(dirname $found_file)
-    echo $found_dir
+#    echo $found_dir
     run_dir=run
     mkdir -p $run_dir
     cp -r $found_dir/* $run_dir
