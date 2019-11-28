@@ -14,4 +14,5 @@ else
     echo "look up where JAVA_HOME is on your system"
     exit
 fi
+export JAVA_HOME
 echo $JAVA_HOME
